@@ -24,7 +24,7 @@
             theme: {
                 extend: {
                     colors: {
-                        'royal-blue': '#2563EB',
+                        'royal-blue': '#4D8BFF',
                         'navy-blue': '#4B5E82',
                         'bright-red': '#EF4444',
                         'emerald-green': '#22C55E',
@@ -46,10 +46,11 @@
 
     <style>
         :root {
-            --font-main: 'Rubik ', sans-serif;
+            --font-main: 'IBM Plex Sans Arabic', sans-serif;
             --color-navy: #4B5E82;
-            /* Transitioned to Sapphire Slate for higher vibrance */
-            --color-royal: #2563EB;
+            --color-navy-deep: #334155;
+            /* Added for depth */
+            --color-royal: #4D8BFF;
             --color-emerald: #22C55E;
         }
 
@@ -111,9 +112,10 @@
         }
 
         .glass-dark {
-            background: rgba(75, 94, 130, 0.7);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(15, 23, 42, 0.3);
+            /* Darker backdrop for depth on sapphire bg */
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         /* Section Layout Presets */
@@ -282,7 +284,7 @@
                     </h1>
 
                     <p
-                        class="text-xl md:text-3xl text-slate-300/90 font-light max-w-3xl mx-auto leading-relaxed font-arabic">
+                        class="text-xl md:text-3xl text-white/90 font-light max-w-3xl mx-auto leading-relaxed font-arabic">
                         Equilibrium 4M3A هي منصة استشارية وتشغيلية متخصصة في تصميم وتفعيل منظومات رياضية ومؤسسية عالية
                         الأثر.
                     </p>
@@ -314,7 +316,7 @@
                             class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-royal-blue to-emerald-green">Compliance</span>
                     </h1>
 
-                    <p class="text-xl md:text-3xl text-slate-300/90 font-light max-w-3xl mx-auto leading-tight italic">
+                    <p class="text-xl md:text-3xl text-white/90 font-light max-w-3xl mx-auto leading-tight italic">
                         Equilibrium 4M3A is a specialized advisory and execution platform dedicated to high-impact
                         sports and inclusion ecosystems.
                     </p>
@@ -387,12 +389,12 @@
                             العمق العلمي <br> <span class="text-royal-blue">والحوكمة القانونية</span>
                         </h2>
                         <p
-                            class="text-lg md:text-2xl text-slate-300 mb-10 md:mb-12 font-arabic font-light leading-loose text-center lg:text-right">
+                            class="text-lg md:text-2xl text-white/90 mb-10 md:mb-12 font-arabic font-light leading-loose text-center lg:text-right">
                             Equilibrium 4M3A هي منصة استشارية وتشغيلية متخصصة في تصميم وتفعيل منظومات رياضية ومؤسسية
                             عالية الأثر، تجمع بين العمق العلمي، الحوكمة القانونية، والتنفيذ الاحترافي.
                         </p>
                         <p
-                            class="text-slate-400 text-lg md:text-xl font-arabic font-thin leading-relaxed text-center lg:text-right">
+                            class="text-slate-200 text-lg md:text-xl font-arabic font-thin leading-relaxed text-center lg:text-right">
                             مرجعيتنا تمتد إلى خبرات علمية وبحثية منذ عام 1991، وتحالفات مؤسسية تقود مستقبل الرياضة
                             والتمكين المجتمعي في المملكة.
                         </p>
@@ -405,11 +407,11 @@
                             Scientific Depth <br> <span class="text-royal-blue">& Governance</span>
                         </h2>
                         <p
-                            class="text-lg md:text-2xl text-slate-300 mb-10 md:mb-12 font-light leading-loose text-center lg:text-left">
+                            class="text-lg md:text-2xl text-white/90 mb-10 md:mb-12 font-light leading-loose text-center lg:text-left">
                             Equilibrium 4M3A is a specialized advisory and execution platform dedicated to designing and
                             activating high-impact sports, education, and inclusion ecosystems.
                         </p>
-                        <p class="text-slate-400 text-lg md:text-xl font-thin leading-relaxed text-center lg:text-left">
+                        <p class="text-slate-200 text-lg md:text-xl font-thin leading-relaxed text-center lg:text-left">
                             Built on scientific expertise dating back to 1991, we combine governance excellence,
                             institutional power, and execution capability.
                         </p>
@@ -427,9 +429,9 @@
                         class="absolute -bottom-6 -left-6 md:-bottom-10 md:-left-10 glass-dark p-6 md:p-12 rounded-2xl md:rounded-3xl border border-white/10">
                         <div class="text-3xl md:text-5xl font-bold mb-1 md:mb-2 text-white">1991</div>
                         <div
-                            class="text-slate-400 uppercase tracking-widest text-[10px] md:text-sm ar-only font-arabic">
+                            class="text-slate-200 uppercase tracking-widest text-[10px] md:text-sm ar-only font-arabic">
                             خبرات بحثية ممتدة</div>
-                        <div class="text-slate-400 uppercase tracking-widest text-[10px] md:text-sm en-only hidden">
+                        <div class="text-slate-200 uppercase tracking-widest text-[10px] md:text-sm en-only hidden">
                             Scientific Heritage</div>
                     </div>
                 </div>
@@ -501,7 +503,7 @@
                     <h2 class="text-4xl md:text-7xl font-bold text-white mb-8 font-arabic leading-tight">مصفوفة الامتثال
                         <br><span class="text-royal-blue">الذكي 2026</span>
                     </h2>
-                    <p class="text-slate-400 text-lg md:text-xl font-arabic max-w-2xl mx-auto leading-relaxed">
+                    <p class="text-slate-200 text-lg md:text-xl font-arabic max-w-2xl mx-auto leading-relaxed">
                         نحن المترجم المعتمد للسياسات والبروتوكولات الدولية بما يتوافق مع نظام الرياضة السعودي 2025،
                         ونضمن لشركائنا الامتثال، الجودة، والريادة.
                     </p>
@@ -512,7 +514,7 @@
                         & Trust</span>
                     <h2 class="text-4xl md:text-7xl font-bold mb-8 leading-tight">Certified Compliance <br><span
                             class="text-royal-blue">Matrix 2026</span></h2>
-                    <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                    <p class="text-slate-200 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
                         We act as the certified translator of international sports policies into the Saudi regulatory
                         environment, ensuring compliance, quality, and leadership.
                     </p>
@@ -532,12 +534,12 @@
                     </div>
                     <div class="text-center md:text-right ar-only">
                         <h4 class="text-white text-2xl font-bold font-arabic mb-3">أنظمة ديسمبر 2025</h4>
-                        <p class="text-slate-400 font-arabic text-lg leading-relaxed">الامتثال الكامل والدقيق للقوانين
+                        <p class="text-slate-200 font-arabic text-lg leading-relaxed">الامتثال الكامل والدقيق للقوانين
                             الرياضية الحديثة بالمملكة، مما يضمن بيئة استثمارية آمنة.</p>
                     </div>
                     <div class="text-center md:text-left en-only hidden">
                         <h4 class="text-white text-2xl font-bold mb-3">Dec 2025 Regulations</h4>
-                        <p class="text-slate-400 text-lg leading-relaxed">Full and precise compliance with modern KSA
+                        <p class="text-slate-200 text-lg leading-relaxed">Full and precise compliance with modern KSA
                             sports law, ensuring a secure investment environment.</p>
                     </div>
                 </div>
@@ -554,12 +556,12 @@
                     </div>
                     <div class="text-center md:text-right ar-only">
                         <h4 class="text-white text-2xl font-bold font-arabic mb-3">المترجم المعتمد</h4>
-                        <p class="text-slate-400 font-arabic text-lg leading-relaxed">تدقيق السياسات واللوائح الدولية
+                        <p class="text-slate-200 font-arabic text-lg leading-relaxed">تدقيق السياسات واللوائح الدولية
                             المعتمدة لضمان التوافق مع أعلى المعايير العالمية.</p>
                     </div>
                     <div class="text-center md:text-left en-only hidden">
                         <h4 class="text-white text-2xl font-bold mb-3">Certified Auditor</h4>
-                        <p class="text-slate-400 text-lg leading-relaxed">Official auditing of international sports
+                        <p class="text-slate-200 text-lg leading-relaxed">Official auditing of international sports
                             policies to ensure alignment with global standards.</p>
                     </div>
                 </div>
@@ -612,14 +614,14 @@
                         <div class="ar-only">
                             <h3 class="text-3xl md:text-4xl font-bold mb-4 md:mb-6 font-arabic text-navy-blue">هندسة
                                 الرعايات والفعاليات</h3>
-                            <p class="text-lg md:text-xl text-slate-500 max-w-xl font-arabic leading-relaxed">بناء
+                            <p class="text-lg md:text-xl text-slate-300 max-w-xl font-arabic leading-relaxed">بناء
                                 استراتيجيات الرعاية والفعاليات الرياضية عالية الأثر، مع ضمان أعلى درجات الامتثال والعائد
                                 الاستثماري.</p>
                         </div>
                         <div class="en-only hidden">
                             <h3 class="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-navy-blue">Sponsorship
                                 Engineering</h3>
-                            <p class="text-lg md:text-xl text-slate-500 max-w-xl leading-relaxed">Strategic sports
+                            <p class="text-lg md:text-xl text-slate-300 max-w-xl leading-relaxed">Strategic sports
                                 events and sponsorship engineering designed for high-impact and regulatory harmony.</p>
                         </div>
                     </div>
@@ -651,13 +653,13 @@
                         <div class="ar-only">
                             <h3 class="text-3xl md:text-4xl font-bold mb-4 md:mb-6 font-arabic text-navy-blue">التأهيل
                                 والتمكين الحركي</h3>
-                            <p class="text-lg md:text-xl text-slate-500 font-arabic leading-relaxed">برامج تخصصية وفق
+                            <p class="text-lg md:text-xl text-slate-300 font-arabic leading-relaxed">برامج تخصصية وفق
                                 منهجية 4M3A العالمية لتمكين القدرات الفائقة وتطوير النخبة.</p>
                         </div>
                         <div class="en-only hidden">
                             <h3 class="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-navy-blue">Specialized
                                 Rehabilitation</h3>
-                            <p class="text-lg md:text-xl text-slate-500 leading-relaxed">Empowerment through specialized
+                            <p class="text-lg md:text-xl text-slate-300 leading-relaxed">Empowerment through specialized
                                 4M3A methodology for high-ability inclusion and elite performance.</p>
                         </div>
                     </div>
@@ -686,13 +688,13 @@
                         <div class="ar-only">
                             <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4 font-arabic text-navy-blue">الاستشارات
                                 والامتثال</h3>
-                            <p class="text-slate-500 font-arabic text-sm md:text-base">استشارات مؤسسية متكاملة تضمن
+                            <p class="text-slate-300 font-arabic text-sm md:text-base">استشارات مؤسسية متكاملة تضمن
                                 الامتثال التام لنظام الرياضة السعودي 2025.</p>
                         </div>
                         <div class="en-only hidden">
                             <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-navy-blue">Consulting &
                                 Compliance</h3>
-                            <p class="text-slate-500 text-sm md:text-base">Institutional consulting and full compliance
+                            <p class="text-slate-300 text-sm md:text-base">Institutional consulting and full compliance
                                 with the Saudi Sports Law 2025.</p>
                         </div>
                     </div>
@@ -729,11 +731,11 @@
                     </div>
                     <div class="ar-only font-arabic">
                         <h4 class="font-bold text-lg mb-3">بروتوكولات محمية</h4>
-                        <p class="text-slate-500 text-sm">منهجيات علمية محمية دوليًا لضمان الحصرية والجودة.</p>
+                        <p class="text-slate-300 text-sm">منهجيات علمية محمية دوليًا لضمان الحصرية والجودة.</p>
                     </div>
                     <div class="en-only hidden">
                         <h4 class="font-bold text-lg mb-3">Protected Protocols</h4>
-                        <p class="text-slate-500 text-sm">Internationally protected scientific protocols for elite
+                        <p class="text-slate-300 text-sm">Internationally protected scientific protocols for elite
                             delivery.</p>
                     </div>
                 </div>
@@ -749,11 +751,11 @@
                     </div>
                     <div class="ar-only font-arabic">
                         <h4 class="font-bold text-lg mb-3">امتثال كامل</h4>
-                        <p class="text-slate-500 text-sm">توافق دقيق مع كافة الأنظمة الوطنية والدولية.</p>
+                        <p class="text-slate-300 text-sm">توافق دقيق مع كافة الأنظمة الوطنية والدولية.</p>
                     </div>
                     <div class="en-only hidden">
                         <h4 class="font-bold text-lg mb-3">Full Compliance</h4>
-                        <p class="text-slate-500 text-sm">Full regulatory and governance compliance in all operations.
+                        <p class="text-slate-300 text-sm">Full regulatory and governance compliance in all operations.
                         </p>
                     </div>
                 </div>
@@ -770,11 +772,11 @@
                     </div>
                     <div class="ar-only font-arabic">
                         <h4 class="font-bold text-lg mb-3">تحالفات عالمية</h4>
-                        <p class="text-slate-500 text-sm">شراكات مع IPC، والجمباز الخاص، وACSM.</p>
+                        <p class="text-slate-300 text-sm">شراكات مع IPC، والجمباز الخاص، وACSM.</p>
                     </div>
                     <div class="en-only hidden">
                         <h4 class="font-bold text-lg mb-3">Global Alliances</h4>
-                        <p class="text-slate-500 text-sm">Official alliances with IPC, Special Olympics, and ACSM.</p>
+                        <p class="text-slate-300 text-sm">Official alliances with IPC, Special Olympics, and ACSM.</p>
                     </div>
                 </div>
                 <!-- Execution -->
@@ -789,11 +791,11 @@
                     </div>
                     <div class="ar-only font-arabic">
                         <h4 class="font-bold text-lg mb-3">قدرة تشغيلية</h4>
-                        <p class="text-slate-500 text-sm">من التخطيط الاستراتيجي إلى التشغيل الكامل.</p>
+                        <p class="text-slate-300 text-sm">من التخطيط الاستراتيجي إلى التشغيل الكامل.</p>
                     </div>
                     <div class="en-only hidden">
                         <h4 class="font-bold text-lg mb-3">Execution Power</h4>
-                        <p class="text-slate-500 text-sm">End-to-end execution capability from strategy to delivery.</p>
+                        <p class="text-slate-300 text-sm">End-to-end execution capability from strategy to delivery.</p>
                     </div>
                 </div>
             </div>
@@ -821,48 +823,48 @@
                 <div class="glass p-8 rounded-[2.5rem] border border-white/5 hover:bg-white/5 transition-all group">
                     <div class="ar-only font-arabic">
                         <h4 class="text-white text-xl font-bold mb-4">الاتحادات واللجان</h4>
-                        <p class="text-slate-400 text-sm leading-relaxed">الاتحادات واللجان الرياضية والبارالمبية
+                        <p class="text-slate-200 text-sm leading-relaxed">الاتحادات واللجان الرياضية والبارالمبية
                             الوطنية والعالمية.</p>
                     </div>
                     <div class="en-only hidden">
                         <h4 class="text-white text-xl font-bold mb-4">Federations & Committees</h4>
-                        <p class="text-slate-400 text-sm leading-relaxed">National and international sports & Paralympic
+                        <p class="text-slate-200 text-sm leading-relaxed">National and international sports & Paralympic
                             committees.</p>
                     </div>
                 </div>
                 <div class="glass p-8 rounded-[2.5rem] border border-white/5 hover:bg-white/5 transition-all group">
                     <div class="ar-only font-arabic">
                         <h4 class="text-white text-xl font-bold mb-4">الجهات الحكومية والشركات</h4>
-                        <p class="text-slate-400 text-sm leading-relaxed">تعزيز المسؤولية الاجتماعية (CSR) ومعايير
+                        <p class="text-slate-200 text-sm leading-relaxed">تعزيز المسؤولية الاجتماعية (CSR) ومعايير
                             الاستدامة (ESG).</p>
                     </div>
                     <div class="en-only hidden">
                         <h4 class="text-white text-xl font-bold mb-4">Government & Corporate</h4>
-                        <p class="text-slate-400 text-sm leading-relaxed">Enhancing Social Responsibility (CSR) and ESG
+                        <p class="text-slate-200 text-sm leading-relaxed">Enhancing Social Responsibility (CSR) and ESG
                             frameworks.</p>
                     </div>
                 </div>
                 <div class="glass p-8 rounded-[2.5rem] border border-white/5 hover:bg-white/5 transition-all group">
                     <div class="ar-only font-arabic">
                         <h4 class="text-white text-xl font-bold mb-4">الأكاديميات والمنشآت</h4>
-                        <p class="text-slate-400 text-sm leading-relaxed">الأكاديميات الرياضية، الأندية المتخصصة،
+                        <p class="text-slate-200 text-sm leading-relaxed">الأكاديميات الرياضية، الأندية المتخصصة،
                             والمراكز الابتكارية.</p>
                     </div>
                     <div class="en-only hidden">
                         <h4 class="text-white text-xl font-bold mb-4">Academies & Clubs</h4>
-                        <p class="text-slate-400 text-sm leading-relaxed">Sports academies, specialized clubs, and elite
+                        <p class="text-slate-200 text-sm leading-relaxed">Sports academies, specialized clubs, and elite
                             facilities.</p>
                     </div>
                 </div>
                 <div class="glass p-8 rounded-[2.5rem] border border-white/5 hover:bg-white/5 transition-all group">
                     <div class="ar-only font-arabic">
                         <h4 class="text-white text-xl font-bold mb-4">برامج القدرات الفائقة</h4>
-                        <p class="text-slate-400 text-sm leading-relaxed">برامج تخصصية لذوي الإعاقة والقدرات الرياضية
+                        <p class="text-slate-200 text-sm leading-relaxed">برامج تخصصية لذوي الإعاقة والقدرات الرياضية
                             الفائقة.</p>
                     </div>
                     <div class="en-only hidden">
                         <h4 class="text-white text-xl font-bold mb-4">High-Ability Programs</h4>
-                        <p class="text-slate-400 text-sm leading-relaxed">Dedicated programs for disability and
+                        <p class="text-slate-200 text-sm leading-relaxed">Dedicated programs for disability and
                             high-ability excellence.</p>
                     </div>
                 </div>
@@ -889,11 +891,11 @@
                         <img src="logo.png" alt="4M3A Equilibrium"
                             class="h-16 w-auto mb-10 filter drop-shadow-[0_0_15px_rgba(37,99,235,0.2)]">
                     </div>
-                    <p class="text-slate-400 text-xl leading-relaxed mb-10 max-w-sm font-arabic ar-only italic opacity-80"
+                    <p class="text-slate-200 text-xl leading-relaxed mb-10 max-w-sm font-arabic ar-only italic opacity-80"
                         dir="ltr">
                         Equilibrium 4M3A منصة لقيادة التحول الرياضي والمؤسسي عبر تكامل العلم والحوكمة والذكاء.
                     </p>
-                    <p class="text-slate-400 text-xl leading-relaxed mb-10 max-w-sm en-only hidden italic opacity-80">
+                    <p class="text-slate-200 text-xl leading-relaxed mb-10 max-w-sm en-only hidden italic opacity-80">
                         A power platform shaping the future of sport and community empowerment through scientific
                         solutions and governance.
                     </p>
@@ -932,22 +934,22 @@
                             <div
                                 class="w-2.5 h-2.5 rounded-full border border-royal-blue group-hover:bg-royal-blue transition-all">
                             </div>
-                            <span class="text-slate-300 text-xl font-arabic ar-only">المملكة العربية السعودية</span>
-                            <span class="text-slate-300 text-xl en-only hidden">Saudi Arabia</span>
+                            <span class="text-white/90 text-xl font-arabic ar-only">المملكة العربية السعودية</span>
+                            <span class="text-white/90 text-xl en-only hidden">Saudi Arabia</span>
                         </li>
                         <li class="flex items-center gap-6 group cursor-pointer">
                             <div
                                 class="w-2.5 h-2.5 rounded-full border border-emerald-green group-hover:bg-emerald-green transition-all">
                             </div>
-                            <span class="text-slate-300 text-xl font-arabic ar-only">سلطنة عمان</span>
-                            <span class="text-slate-300 text-xl en-only hidden">Sultanate of Oman</span>
+                            <span class="text-white/90 text-xl font-arabic ar-only">سلطنة عمان</span>
+                            <span class="text-white/90 text-xl en-only hidden">Sultanate of Oman</span>
                         </li>
                         <li class="flex items-center gap-6 group cursor-pointer">
                             <div
                                 class="w-2.5 h-2.5 rounded-full border border-bright-red group-hover:bg-bright-red transition-all">
                             </div>
-                            <span class="text-slate-300 text-xl font-arabic ar-only">جمهورية مصر العربية</span>
-                            <span class="text-slate-300 text-xl en-only hidden">Republic of Egypt</span>
+                            <span class="text-white/90 text-xl font-arabic ar-only">جمهورية مصر العربية</span>
+                            <span class="text-white/90 text-xl en-only hidden">Republic of Egypt</span>
                         </li>
                     </ul>
                 </div>
@@ -956,7 +958,7 @@
             <div class="pt-12 border-t border-white/5 reveal-on-scroll">
                 <div class="ar-only">
                     <div
-                        class="text-slate-500 font-arabic flex flex-wrap items-center justify-center gap-x-4 gap-y-3 text-sm md:text-base leading-relaxed text-center">
+                        class="text-slate-300 font-arabic flex flex-wrap items-center justify-center gap-x-4 gap-y-3 text-sm md:text-base leading-relaxed text-center">
                         <span class="flex items-center gap-2 whitespace-nowrap">
                             © 2026 <img src="logo.png" alt="4M3A Logo"
                                 class="h-4 md:h-5 w-auto opacity-80 filter brightness-125">
@@ -967,7 +969,7 @@
                 </div>
                 <div class="en-only hidden">
                     <div
-                        class="text-slate-500 flex flex-wrap items-center justify-center gap-x-4 gap-y-3 text-sm md:text-base leading-relaxed text-center">
+                        class="text-slate-300 flex flex-wrap items-center justify-center gap-x-4 gap-y-3 text-sm md:text-base leading-relaxed text-center">
                         <span class="flex items-center gap-2 whitespace-nowrap">
                             © 2026 <img src="logo.png" alt="4M3A Logo"
                                 class="h-4 md:h-5 w-auto opacity-80 filter brightness-125">
