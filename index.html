@@ -219,21 +219,22 @@
 <body class="selection:bg-royal-blue selection:text-white">
 
     <!-- Premium Language Toggle -->
-    <div class="fixed top-4 md:top-8 left-4 md:left-8 right-auto z-50 en-only hidden">
-        <button onclick="toggleLanguage()" id="lang-toggle-en"
-            class="glass-dark text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full font-bold text-xs md:text-sm tracking-widest uppercase border border-white/10 hover:bg-royal-blue transition-all">
-            <span>العربية</span>
-        </button>
-    </div>
-    <div class="fixed top-4 md:top-8 right-4 md:right-8 left-auto z-50 ar-only">
-        <button onclick="toggleLanguage()" id="lang-toggle-ar"
-            class="glass-dark text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full font-bold text-xs md:text-sm tracking-widest uppercase border border-white/10 hover:bg-royal-blue transition-all font-arabic">
-            <span>English</span>
-        </button>
-    </div>
 
     <!-- START: HERO SECTION -->
     <section id="hero" class="section-dark min-h-screen flex items-center justify-center relative overflow-hidden">
+        <!-- Absolute Language Toggle -->
+        <div class="absolute top-4 md:top-8 left-4 md:left-8 right-auto z-50 en-only hidden">
+            <button onclick="toggleLanguage()" id="lang-toggle-en"
+                class="glass-dark text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full font-bold text-xs md:text-sm tracking-widest uppercase border border-white/10 hover:bg-royal-blue transition-all">
+                <span>العربية</span>
+            </button>
+        </div>
+        <div class="absolute top-4 md:top-8 right-4 md:right-8 left-auto z-50 ar-only">
+            <button onclick="toggleLanguage()" id="lang-toggle-ar"
+                class="glass-dark text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full font-bold text-xs md:text-sm tracking-widest uppercase border border-white/10 hover:bg-royal-blue transition-all font-arabic">
+                <span>English</span>
+            </button>
+        </div>
         <!-- Unified Background Components -->
         <div class="bg-texture bg-texture-dark opacity-10"></div>
 
