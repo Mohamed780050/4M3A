@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="main-html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4M3A Equilibrium | قيادة الامتثال والابتكار الرياضي</title>
+    <link rel="shortcut icon" href="./logo.png" type="image/png">
+    <meta name="description"
+        content="منصة 4M3A Equilibrium لتحويل القدرات الخاصة إلى أصول مستدامة عبر الحوكمة المتقدمة وتكامل الذكاء الاصطناعي.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Readex+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#6366f1',
+                        'secondary': '#0ea5e9',
+                        'accent': '#10b981',
+                        'dark-bg': '#020617',
+                        'glass-white': 'rgba(255, 255, 255, 0.05)',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        arabic: ['Readex Pro', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'slow-spin': 'spin 12s linear infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --font-main: 'Readex Pro', sans-serif;
+            --color-primary: #6366f1;
+            --color-secondary: #0ea5e9;
+            --color-accent: #10b981;
+            --color-dark: #020617;
+            --color-card: rgba(15, 23, 42, 0.6);
+        }
+
+        :lang(en) {
+            --font-main: 'Outfit', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--color-dark);
+            color: #f8fafc;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* --- Modern Background System --- */
+
+        .mesh-gradient {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(14, 165, 233, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.1) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(129, 140, 248, 0.1) 0px, transparent 50%);
+            z-index: 0;
+        }
+
+        .bg-texture {
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.03) 1px, transparent 0);
+            background-size: 30px 30px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Abstract Glow Spots */
+        .glow-spot {
+            position: absolute;
+            border-radius: 9999px;
+            filter: blur(140px);
+            opacity: 0.2;
+            pointer-events: none;
+            z-index: 1;
+            mix-blend-mode: screen;
+        }
+
+        .glow-primary {
+            background: var(--color-primary);
+        }
+
+        .glow-secondary {
+            background: var(--color-secondary);
+        }
+
+        .glow-accent {
+            background: var(--color-accent);
+        }
+
+        /* Modern Glassmorphism */
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .glass-dark {
+            background: rgba(2, 6, 23, 0.7);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Section Layout Presets */
+        .section-dark {
+            background-color: var(--color-dark);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-light {
+            background-color: #fbfdff;
+            color: #0f172a;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-tinted {
+            background-color: #f8fafc;
+            color: #0f172a;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* --- Custom UI & Interactions --- */
+
+        .bento-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+            z-index: 10;
+        }
+
+        .bento-card:hover {
+            box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.4);
+            border-color: var(--color-primary);
+            transform: translateY(-8px) scale(1.01);
+            background: rgba(30, 41, 59, 0.6);
+        }
+
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal-on-scroll.active {
+            opacity: 1;
+            transform: translateY(0) !important;
+        }
+
+        .stroke-text {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+            color: transparent;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--color-navy);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--color-royal);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body class="selection:bg-primary selection:text-white">
+
+    <!-- Premium Language Toggle -->
+
+    <!-- START: HERO SECTION -->
+    <section id="hero" class="section-dark min-h-screen flex items-center justify-center relative overflow-hidden">
+        <!-- Absolute Language Toggle -->
+        <div class="absolute top-4 md:top-8 left-4 md:left-8 right-auto z-50 en-only hidden">
+            <button onclick="toggleLanguage()" id="lang-toggle-en"
+                class="glass-dark text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full font-bold text-xs md:text-sm tracking-widest uppercase border border-white/10 hover:bg-primary transition-all">
+                <span>العربية</span>
+            </button>
+        </div>
+        <div class="absolute top-4 md:top-8 right-4 md:right-8 left-auto z-50 ar-only">
+            <button onclick="toggleLanguage()" id="lang-toggle-ar"
+                class="glass-dark text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full font-bold text-xs md:text-sm tracking-widest uppercase border border-white/10 hover:bg-primary transition-all font-arabic">
+                <span>English</span>
+            </button>
+        </div>
+        <!-- Unified Background Components -->
+        <div class="mesh-gradient"></div>
+        <div class="bg-texture opacity-20"></div>
+
+        <!-- Repositioned Glow Spots for clarity -->
+        <div class="glow-spot glow-primary w-[700px] h-[700px] -top-96 -left-48 opacity-30"></div>
+        <div class="glow-spot glow-secondary w-[500px] h-[500px] -bottom-48 -right-48 opacity-20"></div>
+        <div class="glow-spot glow-accent w-[400px] h-[400px] top-1/4 right-1/4 opacity-[0.05]"></div>
+
+        <!-- Floating Abstract Geometry -->
+        <div class="absolute top-20 right-[15%] w-32 h-32 bg-primary/10 rounded-full blur-3xl animate-float opacity-30">
+        </div>
+        <div class="absolute bottom-40 left-[10%] w-48 h-48 bg-accent/5 rounded-full blur-3xl animate-float opacity-20"
+            style="animation-delay: -2s;"></div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <div id="hero-content" class="max-w-6xl mx-auto flex flex-col items-center">
+
+                <!-- BRAND LOGO -->
+                <div class="animate-fade-in-up mb-12">
+                    <div class="relative group">
+                        <div
+                            class="absolute -inset-8 bg-primary/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
+                        </div>
+                        <img src="logo.png" alt="4M3A Equilibrium"
+                            class="w-52 md:w-80 h-auto object-contain relative z-10 filter drop-shadow-[0_0_40px_rgba(99,102,241,0.4)] hover:scale-105 transition-all duration-700">
+                    </div>
+                </div>
+
+                <!-- AR CONTENT (DEFAULT) -->
+                <div class="ar-only space-y-10 animate-fade-in-up w-full">
+                    <div
+                        class="inline-flex items-center gap-3 py-2.5 px-6 rounded-full glass border border-white/10 text-primary font-bold text-xs md:text-sm animate-pulse font-arabic">
+                        <span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_10px_#6366f1]"></span>
+                        التحالف الاستراتيجي الرياضي الأبرز لعام 2026
+                    </div>
+
+                    <h1
+                        class="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.2] mb-8 font-arabic tracking-tight text-white drop-shadow-sm">
+                        قيادة الامتثال <br>
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent">والابتكار
+                            الرياضي</span>
+                    </h1>
+
+                    <p
+                        class="text-xl md:text-3xl text-white/90 font-light max-w-3xl mx-auto leading-relaxed font-arabic">
+                        Equilibrium 4M3A هي منصة استشارية وتشغيلية متخصصة في تصميم وتفعيل منظومات رياضية ومؤسسية عالية
+                        الأثر.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-8 pt-10 pb-12">
+                        <a href="#contact"
+                            class="w-full sm:w-auto bg-primary text-white px-12 md:px-16 py-5 md:py-6 rounded-full font-bold text-xl md:text-2xl shadow-[0_20px_50px_rgba(99,102,241,0.5)] hover:bg-primary/80 transition-all transform hover:-translate-y-2 font-arabic text-center">
+                            تواصل معنا الآن
+                        </a>
+                        <a href="#services"
+                            class="w-full sm:w-auto glass text-white px-12 md:px-16 py-5 md:py-6 rounded-full font-bold text-xl md:text-2xl border border-white/20 hover:bg-white/10 transition-all font-arabic text-center">
+                            استعرض خدماتنا
+                        </a>
+                    </div>
+                </div>
+
+                <!-- EN CONTENT -->
+                <div class="en-only hidden space-y-10 animate-fade-in-up w-full">
+                    <div
+                        class="inline-flex items-center gap-3 py-2.5 px-6 rounded-full glass border border-white/10 text-primary font-bold text-xs md:text-sm animate-pulse">
+                        <span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_10px_#6366f1]"></span>
+                        The Premier Sports Strategic Alliance for 2026
+                    </div>
+
+                    <h1
+                        class="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] mb-8 tracking-tighter text-white">
+                        Leading Sports <br>
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent">Compliance</span>
+                    </h1>
+
+                    <p class="text-xl md:text-3xl text-white/90 font-light max-w-3xl mx-auto leading-tight italic">
+                        Equilibrium 4M3A is a specialized advisory and execution platform dedicated to high-impact
+                        sports and inclusion ecosystems.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-8 pt-10 pb-12">
+                        <a href="#contact"
+                            class="w-full sm:w-auto bg-primary text-white px-12 md:px-16 py-5 md:py-6 rounded-full font-bold text-xl md:text-2xl shadow-[0_20px_50px_rgba(99,102,241,0.5)] hover:bg-primary/80 transition-all transform hover:-translate-y-2 text-center">
+                            Contact Us
+                        </a>
+                        <a href="#services"
+                            class="w-full sm:w-auto glass text-white px-12 md:px-16 py-5 md:py-6 rounded-full font-bold text-xl md:text-2xl border border-white/20 hover:bg-white/10 transition-all text-center">
+                            View Services
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- START: CTA SECTION -->
+    <section id="ready" class="section-light py-32">
+        <div class="bg-texture opacity-30"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div
+                class="flex flex-col lg:flex-row items-center justify-between gap-10 md:gap-12 p-10 md:p-24 bg-dark-bg/5 rounded-[2.5rem] md:rounded-[4rem] border border-slate-200 reveal-on-scroll relative overflow-hidden group">
+                <div
+                    class="glow-spot glow-primary w-64 h-64 absolute -bottom-20 -left-20 opacity-[0.05] group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="max-w-4xl text-center lg:text-right relative z-10">
+                    <h3
+                        class="text-3xl md:text-4xl lg:text-5xl font-bold font-arabic ar-only leading-[1.2] text-slate-900">
+                        هل أنت مستعد لنقل رؤيتك الرياضية إلى <br class="hidden md:block">
+                        <span class="text-primary">المستوى العالمي؟</span>
+                    </h3>
+                    <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold en-only hidden leading-[1.2] text-slate-900">
+                        Ready to take your sports vision to the <br class="hidden lg:block">
+                        <span class="text-primary">Global Level?</span>
+                    </h3>
+                </div>
+                <div class="relative z-10 w-full sm:w-auto">
+                    <a href="mailto:info@4m3a.com"
+                        class="group relative px-8 md:px-12 py-5 md:py-7 bg-primary text-white rounded-full font-bold text-lg md:text-xl transition-all duration-500 overflow-hidden shadow-[0_25px_50px_rgba(99,102,241,0.3)] hover:scale-105 block whitespace-nowrap text-center">
+                        <span class="relative z-10 font-arabic ar-only">لنصنع المستقبل معًا</span>
+                        <span class="relative z-10 en-only hidden">Let’s shape the future together</span>
+                        <div
+                            class="absolute inset-0 bg-slate-900 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END: CTA SECTION -->
+
+    <!-- START: WHO WE ARE (ABOUT) -->
+    <section id="about" class="section-dark py-32">
+        <div class="bg-texture opacity-10"></div>
+        <div class="glow-spot glow-primary w-[800px] h-[800px] -bottom-96 -right-96"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+                <div class="reveal-on-scroll">
+                    <div class="ar-only">
+                        <span
+                            class="text-primary font-bold uppercase tracking-[0.3em] mb-6 block font-arabic text-sm">من
+                            نحن</span>
+                        <h2
+                            class="text-4xl md:text-7xl font-bold mb-8 md:mb-10 font-arabic leading-tight text-center lg:text-right">
+                            العمق العلمي <br> <span class="text-primary">والحوكمة القانونية</span>
+                        </h2>
+                        <p
+                            class="text-lg md:text-2xl text-white/90 mb-10 md:mb-12 font-arabic font-light leading-loose text-center lg:text-right">
+                            Equilibrium 4M3A هي منصة استشارية وتشغيلية متخصصة في تصميم وتفعيل منظومات رياضية ومؤسسية
+                            عالية الأثر، تجمع بين العمق العلمي، الحوكمة القانونية، والتنفيذ الاحترافي.
+                        </p>
+                        <p
+                            class="text-slate-200 text-lg md:text-xl font-arabic font-thin leading-relaxed text-center lg:text-right">
+                            مرجعيتنا تمتد إلى خبرات علمية وبحثية منذ عام 1991، وتحالفات مؤسسية تقود مستقبل الرياضة
+                            والتمكين المجتمعي في المملكة.
+                        </p>
+                    </div>
+                    <div class="en-only hidden text-white">
+                        <span class="text-primary font-bold uppercase tracking-[0.3em] mb-6 block text-sm">Who We
+                            Are</span>
+                        <h2
+                            class="text-4xl md:text-7xl font-black mb-8 md:mb-10 leading-tight text-center lg:text-left uppercase">
+                            Scientific Depth <br> <span class="text-primary">& Governance</span>
+                        </h2>
+                        <p
+                            class="text-lg md:text-2xl text-white/90 mb-10 md:mb-12 font-light leading-loose text-center lg:text-left">
+                            Equilibrium 4M3A is a specialized advisory and execution platform dedicated to designing and
+                            activating high-impact sports, education, and inclusion ecosystems.
+                        </p>
+                        <p class="text-slate-200 text-lg md:text-xl font-thin leading-relaxed text-center lg:text-left">
+                            Built on scientific expertise dating back to 1991, we combine governance excellence,
+                            institutional power, and execution capability.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div
+                        class="absolute inset-0 bg-primary rounded-3xl blur-[80px] opacity-10 group-hover:opacity-30 transition-opacity">
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200"
+                        alt="Expertise"
+                        class="relative rounded-3xl shadow-2xl transition-all duration-700 group-hover:scale-[1.05] grayscale hover:grayscale-0">
+                    <div
+                        class="absolute -bottom-6 -left-6 md:-bottom-10 md:-left-10 glass-dark p-6 md:p-12 rounded-2xl md:rounded-3xl border border-white/10">
+                        <div class="text-3xl md:text-5xl font-bold mb-1 md:mb-2 text-white">1991</div>
+                        <div
+                            class="text-slate-200 uppercase tracking-widest text-[10px] md:text-sm ar-only font-arabic">
+                            خبرات بحثية ممتدة</div>
+                        <div class="text-slate-200 uppercase tracking-widest text-[10px] md:text-sm en-only hidden">
+                            Scientific Heritage</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vision & Mission Block (Merged for seamless background) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-24 reveal-on-scroll">
+                <!-- Vision -->
+                <div
+                    class="glass-dark p-10 md:p-16 rounded-[3rem] border border-white/5 group hover:border-primary/30 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="ar-only">
+                            <h3 class="text-primary font-bold uppercase tracking-widest mb-6 font-arabic">الرؤية</h3>
+                            <p class="text-2xl md:text-4xl font-bold text-white leading-tight font-arabic italic">
+                                "أن نكون المرجع الإقليمي والعالمي في تحويل القدرات الخاصة إلى طاقات إبداعية تقود مستقبل
+                                الرياضة."
+                            </p>
+                        </div>
+                        <div class="en-only hidden">
+                            <h3 class="text-primary font-bold uppercase tracking-widest mb-6">Vision</h3>
+                            <p class="text-2xl md:text-4xl font-black text-white leading-tight italic">
+                                "To become a global reference in transforming special abilities into creative leadership
+                                and sports excellence."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mission -->
+                <div
+                    class="glass-dark p-10 md:p-16 rounded-[3rem] border border-white/5 group hover:border-accent/30 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="ar-only">
+                            <h3 class="text-accent font-bold uppercase tracking-widest mb-6 font-arabic">الرسالة
+                            </h3>
+                            <p class="text-2xl md:text-4xl font-bold text-white leading-tight font-arabic italic">
+                                "تمكين المؤسسات والمجتمع عبر حلول 4M3A العلمية، وتحويل المسؤولية الاجتماعية إلى استثمار
+                                مستدام."
+                            </p>
+                        </div>
+                        <div class="en-only hidden">
+                            <h3 class="text-accent font-bold uppercase tracking-widest mb-6">Mission</h3>
+                            <p class="text-2xl md:text-4xl font-black text-white leading-tight italic">
+                                "To empower institutions and communities through 4M3A scientific solutions and convert
+                                social responsibility into sustainable investment."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- START: COMPLIANCE MATRIX -->
+    <section class="section-dark py-20 md:py-32 border-t border-white/5">
+        <div class="bg-texture opacity-10"></div>
+        <div class="glow-spot glow-primary w-[600px] h-[600px] -top-96 -left-96 opacity-10"></div>
+        <div class="glow-spot glow-secondary w-[500px] h-[500px] -bottom-48 -right-48 opacity-5"></div>
+
+        <div
+            class="absolute top-0 left-0 w-full h-1 md:h-1.5 bg-gradient-to-r from-primary via-secondary to-accent opacity-80">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 md:mb-24 reveal-on-scroll">
+                <div class="ar-only">
+                    <span
+                        class="text-primary font-bold uppercase tracking-[0.3em] mb-6 block font-arabic text-xs md:text-sm">الامتثال
+                        والثقة</span>
+                    <h2 class="text-4xl md:text-7xl font-bold text-white mb-8 font-arabic leading-tight">مصفوفة الامتثال
+                        <br><span class="text-primary">الذكي 2026</span>
+                    </h2>
+                    <p class="text-slate-200 text-lg md:text-xl font-arabic max-w-2xl mx-auto leading-relaxed">
+                        نحن المترجم المعتمد للسياسات والبروتوكولات الدولية بما يتوافق مع نظام الرياضة السعودي 2025،
+                        ونضمن لشركائنا الامتثال، الجودة، والريادة.
+                    </p>
+                </div>
+                <div class="en-only hidden text-white">
+                    <span
+                        class="text-primary font-bold uppercase tracking-[0.3em] mb-6 block text-xs md:text-sm">Compliance
+                        & Trust</span>
+                    <h2 class="text-4xl md:text-7xl font-bold mb-8 leading-tight">Certified Compliance <br><span
+                            class="text-primary">Matrix 2026</span></h2>
+                    <p class="text-slate-200 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                        We act as the certified translator of international sports policies into the Saudi regulatory
+                        environment, ensuring compliance, quality, and leadership.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 reveal-on-scroll">
+                <div
+                    class="glass-dark p-8 md:p-12 rounded-[2.5rem] border border-white/10 flex flex-col md:flex-row items-center md:items-start gap-8 group hover:bg-white/5 transition-all">
+                    <div
+                        class="w-20 h-20 shrink-0 bg-accent/10 rounded-2xl flex items-center justify-center text-accent group-hover:scale-110 transition-transform">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="text-center md:text-right ar-only">
+                        <h4 class="text-white text-2xl font-bold font-arabic mb-3">أنظمة ديسمبر 2025</h4>
+                        <p class="text-slate-200 font-arabic text-lg leading-relaxed">الامتثال الكامل والدقيق للقوانين
+                            الرياضية الحديثة بالمملكة، مما يضمن بيئة استثمارية آمنة.</p>
+                    </div>
+                    <div class="text-center md:text-left en-only hidden">
+                        <h4 class="text-white text-2xl font-bold mb-3">Dec 2025 Regulations</h4>
+                        <p class="text-slate-200 text-lg leading-relaxed">Full and precise compliance with modern KSA
+                            sports law, ensuring a secure investment environment.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="glass-dark p-8 md:p-12 rounded-[2.5rem] border border-white/10 flex flex-col md:flex-row items-center md:items-start gap-8 group hover:bg-white/5 transition-all">
+                    <div
+                        class="w-20 h-20 shrink-0 bg-primary/10 rounded-2xl flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A10.003 10.003 0 0012 3c1.72 0 3.347.433 4.774 1.2m0 0l.054.09A10.003 10.003 0 0114.753 19.571M12 11a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 110 4m0 0a2 2 0 100 4m0-4h1.5a1.5 1.5 0 011.5 1.5V19a1.5 1.5 0 01-1.5 1.5H19">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="text-center md:text-right ar-only">
+                        <h4 class="text-white text-2xl font-bold font-arabic mb-3">المترجم المعتمد</h4>
+                        <p class="text-slate-200 font-arabic text-lg leading-relaxed">تدقيق السياسات واللوائح الدولية
+                            المعتمدة لضمان التوافق مع أعلى المعايير العالمية.</p>
+                    </div>
+                    <div class="text-center md:text-left en-only hidden">
+                        <h4 class="text-white text-2xl font-bold mb-3">Certified Auditor</h4>
+                        <p class="text-slate-200 text-lg leading-relaxed">Official auditing of international sports
+                            policies to ensure alignment with global standards.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- START: WHAT WE DO (SERVICES) -->
+    <section id="services" class="section-luxury-dark py-20 md:py-32">
+        <div class="mesh-gradient opacity-30"></div>
+        <div class="bg-texture opacity-10"></div>
+        <div class="glow-spot glow-primary w-[500px] h-[500px] -top-20 -right-20 opacity-[0.05]"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8 reveal-on-scroll">
+                <div class="ar-only text-center md:text-right">
+                    <span
+                        class="text-primary font-bold uppercase tracking-[0.3em] mb-4 block font-arabic text-xs md:text-sm">ماذا
+                        نقدم</span>
+                    <h2 class="text-4xl md:text-7xl font-bold font-arabic leading-tight text-white">المنظومة
+                        المتكاملة <br class="hidden md:block"> للنمو المستدام</h2>
+                </div>
+                <div class="en-only hidden text-center md:text-left">
+                    <span class="text-primary font-bold uppercase tracking-[0.3em] mb-4 block text-xs md:text-sm">What
+                        We Do</span>
+                    <h2 class="text-4xl md:text-7xl font-bold leading-tight text-white">Integrated Ecosystem <br
+                            class="hidden md:block"> for Growth</h2>
+                </div>
+                <div class="w-24 h-1.5 bg-primary hidden md:block rounded-full shadow-[0_0_15px_rgba(99,102,241,0.5)]">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
+                <!-- Sponsorship -->
+                <div
+                    class="md:col-span-8 bento-card rounded-[2.5rem] md:rounded-[3.5rem] p-8 md:p-12 flex flex-col justify-between min-h-[350px] md:min-h-[450px] reveal-on-scroll">
+                    <div class="flex justify-between items-start mb-10 md:mb-12">
+                        <div
+                            class="w-16 h-16 md:w-20 md:h-20 bg-primary/10 rounded-2xl md:rounded-3xl flex items-center justify-center text-primary">
+                            <svg class="w-10 h-10 md:w-12 md:h-12" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
+                            </svg>
+                        </div>
+                        <span class="text-slate-200 font-bold text-4xl md:text-5xl">01</span>
+                    </div>
+                    <div>
+                        <div class="ar-only">
+                            <h3 class="text-3xl md:text-4xl font-bold mb-4 md:mb-6 font-arabic text-slate-900">هندسة
+                                الرعايات والفعاليات</h3>
+                            <p class="text-lg md:text-xl text-slate-300 max-w-xl font-arabic leading-relaxed">بناء
+                                استراتيجيات الرعاية والفعاليات الرياضية عالية الأثر، مع ضمان أعلى درجات الامتثال والعائد
+                                الاستثماري.</p>
+                        </div>
+                        <div class="en-only hidden">
+                            <h3 class="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-slate-900">Sponsorship
+                                Engineering</h3>
+                            <p class="text-lg md:text-xl text-slate-300 max-w-xl leading-relaxed">Strategic sports
+                                events and sponsorship engineering designed for high-impact and regulatory harmony.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Biometrics -->
+                <div
+                    class="md:col-span-4 bento-card rounded-[2.5rem] md:rounded-[3.5rem] p-8 md:p-12 bg-slate-900 text-white flex flex-col justify-between reveal-on-scroll">
+                    <div class="glow-spot glow-primary w-64 h-64 opacity-10 -top-10 -right-10"></div>
+                    <span class="text-white/10 font-bold text-4xl md:text-5xl relative z-10">02</span>
+                    <div class="relative z-10 pt-16 md:pt-0">
+                        <div class="ar-only">
+                            <h3 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6 font-arabic">ذكاء الأداء الحيوي</h3>
+                            <p class="text-white/60 font-arabic text-base md:text-lg">حلول الذكاء الاصطناعي والتحليل
+                                الحيوي المتطور للأداء لتحقيق أقصى درجات الكفاءة الرياضية.</p>
+                        </div>
+                        <div class="en-only hidden">
+                            <h3 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Sports AI & Biometrics</h3>
+                            <p class="text-white/60 text-base md:text-lg">Leveraging sports AI and biometric analysis
+                                for precision performance intelligence.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Methodology -->
+                <div
+                    class="md:col-span-8 bento-card rounded-[2.5rem] md:rounded-[4rem] p-8 md:p-12 bg-slate-50 flex flex-col md:flex-row gap-10 md:gap-12 items-center reveal-on-scroll">
+                    <div class="md:w-1/2">
+                        <div class="ar-only">
+                            <h3 class="text-3xl md:text-4xl font-bold mb-4 md:mb-6 font-arabic text-slate-900">التأهيل
+                                والتمكين الحركي</h3>
+                            <p class="text-lg md:text-xl text-slate-300 font-arabic leading-relaxed">برامج تخصصية وفق
+                                منهجية 4M3A العالمية لتمكين القدرات الفائقة وتطوير النخبة.</p>
+                        </div>
+                        <div class="en-only hidden">
+                            <h3 class="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-slate-900">Specialized
+                                Rehabilitation</h3>
+                            <p class="text-lg md:text-xl text-slate-300 leading-relaxed">Empowerment through specialized
+                                4M3A methodology for high-ability inclusion and elite performance.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full md:w-1/2 bg-white p-6 md:p-10 rounded-[2rem] md:rounded-[2.5rem] shadow-2xl relative">
+                        <div class="glow-spot glow-emerald w-32 h-32 absolute -top-5 -left-5 opacity-10"></div>
+                        <div class="space-y-4 md:space-y-6">
+                            <div class="h-3 md:h-4 bg-primary/20 rounded-full w-3/4"></div>
+                            <div class="h-3 md:h-4 bg-primary/10 rounded-full w-full"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compliance -->
+                <div
+                    class="md:col-span-4 bento-card rounded-[2.5rem] md:rounded-[3.5rem] p-8 md:p-12 flex flex-col justify-between border-2 border-primary/10 reveal-on-scroll">
+                    <div
+                        class="w-14 h-14 md:w-16 md:h-16 bg-primary/20 rounded-xl md:rounded-2xl flex items-center justify-center text-primary mb-8 md:mb-10">
+                        <svg class="w-7 h-7 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="ar-only">
+                            <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4 font-arabic text-slate-900">الاستشارات
+                                والامتثال</h3>
+                            <p class="text-slate-300 font-arabic text-sm md:text-base">استشارات مؤسسية متكاملة تضمن
+                                الامتثال التام لنظام الرياضة السعودي 2025.</p>
+                        </div>
+                        <div class="en-only hidden">
+                            <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-slate-900">Consulting &
+                                Compliance</h3>
+                            <p class="text-slate-300 text-sm md:text-base">Institutional consulting and full compliance
+                                with the Saudi Sports Law 2025.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- START: WHY 4M3A -->
+    <section class="section-tinted py-32 border-y border-slate-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 md:mb-24 reveal-on-scroll">
+                <div class="ar-only">
+                    <h2 class="text-4xl md:text-6xl font-bold text-slate-900 font-arabic">لماذا <span
+                            class="text-primary">Equilibrium 4M3A؟</span></h2>
+                </div>
+                <div class="en-only hidden">
+                    <h2 class="text-4xl md:text-6xl font-black text-slate-900">Why <span
+                            class="text-primary">Equilibrium 4M3A?</span></h2>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 reveal-on-scroll">
+                <!-- Protocols -->
+                <div
+                    class="bg-white p-10 rounded-3xl shadow-sm border border-slate-50 hover:shadow-xl transition-all group">
+                    <div
+                        class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="ar-only font-arabic">
+                        <h4 class="font-bold text-lg mb-3">بروتوكولات محمية</h4>
+                        <p class="text-slate-300 text-sm">منهجيات علمية محمية دوليًا لضمان الحصرية والجودة.</p>
+                    </div>
+                    <div class="en-only hidden">
+                        <h4 class="font-bold text-lg mb-3">Protected Protocols</h4>
+                        <p class="text-slate-300 text-sm">Internationally protected scientific protocols for elite
+                            delivery.</p>
+                    </div>
+                </div>
+                <!-- Compliance -->
+                <div
+                    class="bg-white p-10 rounded-3xl shadow-sm border border-slate-50 hover:shadow-xl transition-all group">
+                    <div
+                        class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-accent mb-6 group-hover:bg-accent group-hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <div class="ar-only font-arabic">
+                        <h4 class="font-bold text-lg mb-3">امتثال كامل</h4>
+                        <p class="text-slate-300 text-sm">توافق دقيق مع كافة الأنظمة الوطنية والدولية.</p>
+                    </div>
+                    <div class="en-only hidden">
+                        <h4 class="font-bold text-lg mb-3">Full Compliance</h4>
+                        <p class="text-slate-300 text-sm">Full regulatory and governance compliance in all operations.
+                        </p>
+                    </div>
+                </div>
+                <!-- Alliances -->
+                <div
+                    class="bg-white p-10 rounded-3xl shadow-sm border border-slate-50 hover:shadow-xl transition-all group">
+                    <div
+                        class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 014.156-5.414m2.844 0a5.002 5.002 0 014.156 5.414M11 11a4 4 0 100-8 4 4 0 000 8zm8-4a9 9 0 00-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9-3-9m-9 9a9 9 0 019-9">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="ar-only font-arabic">
+                        <h4 class="font-bold text-lg mb-3">تحالفات عالمية</h4>
+                        <p class="text-slate-300 text-sm">شراكات مع IPC، والجمباز الخاص، وACSM.</p>
+                    </div>
+                    <div class="en-only hidden">
+                        <h4 class="font-bold text-lg mb-3">Global Alliances</h4>
+                        <p class="text-slate-300 text-sm">Official alliances with IPC, Special Olympics, and ACSM.</p>
+                    </div>
+                </div>
+                <!-- Execution -->
+                <div
+                    class="bg-white p-10 rounded-3xl shadow-sm border border-slate-50 hover:shadow-xl transition-all group">
+                    <div
+                        class="w-12 h-12 bg-rose-500/10 rounded-xl flex items-center justify-center text-rose-500 mb-6 group-hover:bg-rose-500 group-hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </div>
+                    <div class="ar-only font-arabic">
+                        <h4 class="font-bold text-lg mb-3">قدرة تشغيلية</h4>
+                        <p class="text-slate-300 text-sm">من التخطيط الاستراتيجي إلى التشغيل الكامل.</p>
+                    </div>
+                    <div class="en-only hidden">
+                        <h4 class="font-bold text-lg mb-3">Execution Power</h4>
+                        <p class="text-slate-300 text-sm">End-to-end execution capability from strategy to delivery.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- START: WHO WE SERVE -->
+    <section class="section-dark py-32">
+        <div class="container mx-auto px-6">
+            <div class="mb-16 md:mb-24 reveal-on-scroll">
+                <div class="ar-only">
+                    <span
+                        class="text-primary font-bold uppercase tracking-[0.3em] mb-4 block font-arabic text-sm">القطاعات</span>
+                    <h2 class="text-4xl md:text-7xl font-bold font-arabic text-white">القطاعات <span
+                            class="text-primary">التي نخدمها</span></h2>
+                </div>
+                <div class="en-only hidden">
+                    <span class="text-primary font-bold uppercase tracking-[0.3em] mb-4 block text-sm">Sectors</span>
+                    <h2 class="text-4xl md:text-7xl font-black text-white">Who <span class="text-primary">We
+                            Serve</span></h2>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 reveal-on-scroll">
+                <div class="glass p-8 rounded-[2.5rem] border border-white/5 hover:bg-white/5 transition-all group">
+                    <div class="ar-only font-arabic">
+                        <h4 class="text-white text-xl font-bold mb-4">الاتحادات واللجان</h4>
+                        <p class="text-slate-200 text-sm leading-relaxed">الاتحادات واللجان الرياضية والبارالمبية
+                            الوطنية والعالمية.</p>
+                    </div>
+                    <div class="en-only hidden">
+                        <h4 class="text-white text-xl font-bold mb-4">Federations & Committees</h4>
+                        <p class="text-slate-200 text-sm leading-relaxed">National and international sports & Paralympic
+                            committees.</p>
+                    </div>
+                </div>
+                <div class="glass p-8 rounded-[2.5rem] border border-white/5 hover:bg-white/5 transition-all group">
+                    <div class="ar-only font-arabic">
+                        <h4 class="text-white text-xl font-bold mb-4">الجهات الحكومية والشركات</h4>
+                        <p class="text-slate-200 text-sm leading-relaxed">تعزيز المسؤولية الاجتماعية (CSR) ومعايير
+                            الاستدامة (ESG).</p>
+                    </div>
+                    <div class="en-only hidden">
+                        <h4 class="text-white text-xl font-bold mb-4">Government & Corporate</h4>
+                        <p class="text-slate-200 text-sm leading-relaxed">Enhancing Social Responsibility (CSR) and ESG
+                            frameworks.</p>
+                    </div>
+                </div>
+                <div class="glass p-8 rounded-[2.5rem] border border-white/5 hover:bg-white/5 transition-all group">
+                    <div class="ar-only font-arabic">
+                        <h4 class="text-white text-xl font-bold mb-4">الأكاديميات والمنشآت</h4>
+                        <p class="text-slate-200 text-sm leading-relaxed">الأكاديميات الرياضية، الأندية المتخصصة،
+                            والمراكز الابتكارية.</p>
+                    </div>
+                    <div class="en-only hidden">
+                        <h4 class="text-white text-xl font-bold mb-4">Academies & Clubs</h4>
+                        <p class="text-slate-200 text-sm leading-relaxed">Sports academies, specialized clubs, and elite
+                            facilities.</p>
+                    </div>
+                </div>
+                <div class="glass p-8 rounded-[2.5rem] border border-white/5 hover:bg-white/5 transition-all group">
+                    <div class="ar-only font-arabic">
+                        <h4 class="text-white text-xl font-bold mb-4">برامج القدرات الفائقة</h4>
+                        <p class="text-slate-200 text-sm leading-relaxed">برامج تخصصية لذوي الإعاقة والقدرات الرياضية
+                            الفائقة.</p>
+                    </div>
+                    <div class="en-only hidden">
+                        <h4 class="text-white text-xl font-bold mb-4">High-Ability Programs</h4>
+                        <p class="text-slate-200 text-sm leading-relaxed">Dedicated programs for disability and
+                            high-ability excellence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- START: FOOTER -->
+    <footer id="contact" class="section-dark py-32 border-t border-white/5">
+        <!-- Unified Background Design -->
+        <div class="bg-texture opacity-10"></div>
+        <div
+            class="glow-spot glow-primary w-[600px] h-[600px] bottom-0 right-0 translate-x-1/2 translate-y-1/2 opacity-10">
+        </div>
+        <div
+            class="glow-spot glow-accent w-[400px] h-[400px] top-0 left-0 -translate-x-1/2 -translate-y-1/2 opacity-10">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 mb-24" dir="ltr">
+                <!-- Brand Identity -->
+                <div class="lg:col-span-7 reveal-on-scroll flex flex-col items-start text-left">
+                    <div class="flex items-center gap-6 w-full">
+                        <img src="logo.png" alt="4M3A Equilibrium"
+                            class="h-16 w-auto mb-10 filter drop-shadow-[0_0_15px_rgba(99,102,241,0.3)]">
+                    </div>
+                    <p class="text-slate-200 text-xl leading-relaxed mb-10 max-w-sm font-arabic ar-only italic opacity-80"
+                        dir="ltr">
+                        Equilibrium 4M3A منصة لقيادة التحول الرياضي والمؤسسي عبر تكامل العلم والحوكمة والذكاء.
+                    </p>
+                    <p class="text-slate-200 text-xl leading-relaxed mb-10 max-w-sm en-only hidden italic opacity-80">
+                        A power platform shaping the future of sport and community empowerment through scientific
+                        solutions and governance.
+                    </p>
+
+                    <div class="flex gap-6">
+                        <a href="mailto:info@4m3a.com"
+                            class="w-16 h-16 glass rounded-2xl flex items-center justify-center hover:bg-primary transition-all transform hover:-translate-y-2 group shadow-xl">
+                            <svg class="w-8 h-8 group-hover:scale-110 transition-transform" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://www.4m3a.com" target="_blank"
+                            class="w-16 h-16 glass rounded-2xl flex items-center justify-center hover:bg-accent transition-all transform hover:-translate-y-2 group shadow-xl">
+                            <svg class="w-8 h-8 group-hover:scale-110 transition-transform" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9-3-9m-9 9a9 9 0 019-9">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Strategic Presence -->
+                <div class="lg:col-span-5 reveal-on-scroll">
+                    <h4
+                        class="text-white font-bold mb-10 uppercase text-xs tracking-[0.4em] opacity-40 font-arabic ar-only">
+                        خارطة التواجد الاستراتيجي</h4>
+                    <h4 class="text-white font-bold mb-10 uppercase text-xs tracking-[0.4em] opacity-40 en-only hidden">
+                        Global Presence</h4>
+                    <ul class="space-y-8">
+                        <li class="flex items-center gap-6 group cursor-pointer">
+                            <div
+                                class="w-2.5 h-2.5 rounded-full border border-primary group-hover:bg-primary transition-all">
+                            </div>
+                            <span class="text-white/90 text-xl font-arabic ar-only">المملكة العربية السعودية</span>
+                            <span class="text-white/90 text-xl en-only hidden">Saudi Arabia</span>
+                        </li>
+                        <li class="flex items-center gap-6 group cursor-pointer">
+                            <div
+                                class="w-2.5 h-2.5 rounded-full border border-accent group-hover:bg-accent transition-all">
+                            </div>
+                            <span class="text-white/90 text-xl font-arabic ar-only">سلطنة عمان</span>
+                            <span class="text-white/90 text-xl en-only hidden">Sultanate of Oman</span>
+                        </li>
+                        <li class="flex items-center gap-6 group cursor-pointer">
+                            <div
+                                class="w-2.5 h-2.5 rounded-full border border-rose-500 group-hover:bg-rose-500 transition-all">
+                            </div>
+                            <span class="text-white/90 text-xl font-arabic ar-only">جمهورية مصر العربية</span>
+                            <span class="text-white/90 text-xl en-only hidden">Republic of Egypt</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-12 border-t border-white/5 reveal-on-scroll">
+                <div class="ar-only">
+                    <div
+                        class="text-slate-300 font-arabic flex flex-wrap items-center justify-center gap-x-4 gap-y-3 text-sm md:text-base leading-relaxed text-center">
+                        <span class="flex items-center gap-2 whitespace-nowrap">
+                            © 2026 <img src="logo.png" alt="4M3A Logo"
+                                class="h-4 md:h-5 w-auto opacity-80 filter brightness-125">
+                        </span>
+                        <span class="hidden sm:block w-px h-4 bg-white/10"></span>
+                        <span class="opacity-70">تحالف سيادي عالمي. جميع الحقوق محفوظة.</span>
+                    </div>
+                </div>
+                <div class="en-only hidden">
+                    <div
+                        class="text-slate-300 flex flex-wrap items-center justify-center gap-x-4 gap-y-3 text-sm md:text-base leading-relaxed text-center">
+                        <span class="flex items-center gap-2 whitespace-nowrap">
+                            © 2026 <img src="logo.png" alt="4M3A Logo"
+                                class="h-4 md:h-5 w-auto opacity-80 filter brightness-125">
+                        </span>
+                        <span class="hidden sm:block w-px h-4 bg-white/10"></span>
+                        <span class="opacity-70">Global Sovereign Alliance. All rights reserved.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleLanguage() {
+            const html = document.getElementById('main-html');
+            const arOnly = document.querySelectorAll('.ar-only');
+            const enOnly = document.querySelectorAll('.en-only');
+
+            if (html.dir === 'rtl') {
+                html.dir = 'ltr';
+                html.lang = 'en';
+                arOnly.forEach(el => el.classList.add('hidden'));
+                enOnly.forEach(el => el.classList.remove('hidden'));
+                document.body.style.setProperty('--font-main', "'Outfit', sans-serif");
+            } else {
+                html.dir = 'rtl';
+                html.lang = 'ar';
+                arOnly.forEach(el => el.classList.remove('hidden'));
+                enOnly.forEach(el => el.classList.add('hidden'));
+                document.body.style.setProperty('--font-main', "'Readex Pro', sans-serif");
+            }
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal-on-scroll').forEach((el) => observer.observe(el));
+    </script>
+</body>
+
+</html>
