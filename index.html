@@ -664,12 +664,11 @@
                         </div>
                     </div>
                     <div
-                        class="w-full md:w-1/2 bg-white p-6 md:p-10 rounded-[2rem] md:rounded-[2.5rem] shadow-2xl relative">
-                        <div class="glow-spot glow-emerald w-32 h-32 absolute -top-5 -left-5 opacity-10"></div>
-                        <div class="space-y-4 md:space-y-6">
-                            <div class="h-3 md:h-4 bg-blue-100 rounded-full w-3/4"></div>
-                            <div class="h-3 md:h-4 bg-blue-50 rounded-full w-full"></div>
-                        </div>
+                        class="w-full md:w-1/2 h-64 md:h-80 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl relative">
+                        <img src="main.webp" alt="Performance Methodology"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-blue/40 to-transparent"></div>
+                        <div class="glow-spot glow-emerald w-32 h-32 absolute -top-5 -left-5 opacity-20"></div>
                     </div>
                 </div>
 
@@ -717,85 +716,124 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 reveal-on-scroll">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 reveal-on-scroll">
                 <!-- Protocols -->
                 <div
-                    class="bg-white p-10 rounded-3xl shadow-sm border border-slate-50 hover:shadow-xl transition-all group">
-                    <div
-                        class="w-12 h-12 bg-royal-blue/10 rounded-xl flex items-center justify-center text-royal-blue mb-6 group-hover:bg-royal-blue group-hover:text-white transition-colors">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
-                            </path>
-                        </svg>
+                    class="group bg-white rounded-[2.5rem] shadow-sm border border-slate-100 overflow-hidden hover:shadow-2xl hover:-translate-y-3 transition-all duration-500">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="icons/1.webp" alt="Protocols"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-royal-blue/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
                     </div>
-                    <div class="ar-only font-arabic">
-                        <h4 class="font-bold text-lg mb-3">بروتوكولات محمية</h4>
-                        <p class="text-slate-300 text-sm">منهجيات علمية محمية دوليًا لضمان الحصرية والجودة.</p>
-                    </div>
-                    <div class="en-only hidden">
-                        <h4 class="font-bold text-lg mb-3">Protected Protocols</h4>
-                        <p class="text-slate-300 text-sm">Internationally protected scientific protocols for elite
-                            delivery.</p>
+                    <div class="p-8 text-center sm:text-right">
+                        <div class="ar-only font-arabic">
+                            <h4 class="font-bold text-xl mb-4 text-navy-blue">بروتوكولات محمية</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">منهجيات علمية محمية دوليًا لضمان الحصرية
+                                والجودة العالية.</p>
+                        </div>
+                        <div class="en-only hidden">
+                            <h4 class="font-bold text-xl mb-4 text-navy-blue">Protected Protocols</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Internationally protected scientific
+                                protocols for elite delivery.</p>
+                        </div>
                     </div>
                 </div>
+
                 <!-- Compliance -->
                 <div
-                    class="bg-white p-10 rounded-3xl shadow-sm border border-slate-50 hover:shadow-xl transition-all group">
-                    <div
-                        class="w-12 h-12 bg-emerald-green/10 rounded-xl flex items-center justify-center text-emerald-green mb-6 group-hover:bg-emerald-green group-hover:text-white transition-colors">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
+                    class="group bg-white rounded-[2.5rem] shadow-sm border border-slate-100 overflow-hidden hover:shadow-2xl hover:-translate-y-3 transition-all duration-500">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="icons/2.webp" alt="Compliance"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-emerald-green/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
                     </div>
-                    <div class="ar-only font-arabic">
-                        <h4 class="font-bold text-lg mb-3">امتثال كامل</h4>
-                        <p class="text-slate-300 text-sm">توافق دقيق مع كافة الأنظمة الوطنية والدولية.</p>
-                    </div>
-                    <div class="en-only hidden">
-                        <h4 class="font-bold text-lg mb-3">Full Compliance</h4>
-                        <p class="text-slate-300 text-sm">Full regulatory and governance compliance in all operations.
-                        </p>
+                    <div class="p-8 text-center sm:text-right">
+                        <div class="ar-only font-arabic">
+                            <h4 class="font-bold text-xl mb-4 text-navy-blue">امتثال كامل</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">توافق دقيق مع كافة الأنظمة الوطنية
+                                والدولية والمعايير الحديثة.</p>
+                        </div>
+                        <div class="en-only hidden">
+                            <h4 class="font-bold text-xl mb-4 text-navy-blue">Full Compliance</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Full regulatory and governance compliance
+                                in all global operations.</p>
+                        </div>
                     </div>
                 </div>
+
                 <!-- Alliances -->
                 <div
-                    class="bg-white p-10 rounded-3xl shadow-sm border border-slate-50 hover:shadow-xl transition-all group">
-                    <div
-                        class="w-12 h-12 bg-royal-blue/10 rounded-xl flex items-center justify-center text-royal-blue mb-6 group-hover:bg-royal-blue group-hover:text-white transition-colors">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 014.156-5.414m2.844 0a5.002 5.002 0 014.156 5.414M11 11a4 4 0 100-8 4 4 0 000 8zm8-4a9 9 0 00-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9-3-9m-9 9a9 9 0 019-9">
-                            </path>
-                        </svg>
+                    class="group bg-white rounded-[2.5rem] shadow-sm border border-slate-100 overflow-hidden hover:shadow-2xl hover:-translate-y-3 transition-all duration-500">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="icons/3.webp" alt="Alliances"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-royal-blue/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
                     </div>
-                    <div class="ar-only font-arabic">
-                        <h4 class="font-bold text-lg mb-3">تحالفات عالمية</h4>
-                        <p class="text-slate-300 text-sm">شراكات مع IPC، والجمباز الخاص، وACSM.</p>
-                    </div>
-                    <div class="en-only hidden">
-                        <h4 class="font-bold text-lg mb-3">Global Alliances</h4>
-                        <p class="text-slate-300 text-sm">Official alliances with IPC, Special Olympics, and ACSM.</p>
+                    <div class="p-8 text-center sm:text-right">
+                        <div class="ar-only font-arabic">
+                            <h4 class="font-bold text-xl mb-4 text-navy-blue">تحالفات عالمية</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">شراكات استراتيجية مع IPC، والجمباز الخاص،
+                                وACSM لتمكين المجتمع.</p>
+                        </div>
+                        <div class="en-only hidden">
+                            <h4 class="font-bold text-xl mb-4 text-navy-blue">Global Alliances</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Official alliances with IPC, Special
+                                Olympics, and ACSM.</p>
+                        </div>
                     </div>
                 </div>
+
                 <!-- Execution -->
                 <div
-                    class="bg-white p-10 rounded-3xl shadow-sm border border-slate-50 hover:shadow-xl transition-all group">
-                    <div
-                        class="w-12 h-12 bg-bright-red/10 rounded-xl flex items-center justify-center text-bright-red mb-6 group-hover:bg-bright-red group-hover:text-white transition-colors">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                        </svg>
+                    class="group bg-white rounded-[2.5rem] shadow-sm border border-slate-100 overflow-hidden hover:shadow-2xl hover:-translate-y-3 transition-all duration-500">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="icons/4.webp" alt="Execution"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-bright-red/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
                     </div>
-                    <div class="ar-only font-arabic">
-                        <h4 class="font-bold text-lg mb-3">قدرة تشغيلية</h4>
-                        <p class="text-slate-300 text-sm">من التخطيط الاستراتيجي إلى التشغيل الكامل.</p>
+                    <div class="p-8 text-center sm:text-right">
+                        <div class="ar-only font-arabic">
+                            <h4 class="font-bold text-xl mb-4 text-navy-blue">قدرة تشغيلية</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">قدرات تنفيذية شاملة تبدأ من التخطيط
+                                الاستراتيجي إلى التشغيل الكامل.</p>
+                        </div>
+                        <div class="en-only hidden">
+                            <h4 class="font-bold text-xl mb-4 text-navy-blue">Execution Power</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">End-to-end execution capability from
+                                strategy to delivery.</p>
+                        </div>
                     </div>
-                    <div class="en-only hidden">
-                        <h4 class="font-bold text-lg mb-3">Execution Power</h4>
-                        <p class="text-slate-300 text-sm">End-to-end execution capability from strategy to delivery.</p>
+                </div>
+
+                <!-- Innovation -->
+                <div
+                    class="group bg-white rounded-[2.5rem] shadow-sm border border-slate-100 overflow-hidden hover:shadow-2xl hover:-translate-y-3 transition-all duration-500">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="icons/5.webp" alt="Innovation"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-navy-blue/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                    </div>
+                    <div class="p-8 text-center sm:text-right">
+                        <div class="ar-only font-arabic">
+                            <h4 class="font-bold text-xl mb-4 text-navy-blue">ابتكار مستمر</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">دمج أحدث تقنيات الذكاء الاصطناعي والحلول
+                                المبتكرة لخدمة الأهداف.</p>
+                        </div>
+                        <div class="en-only hidden">
+                            <h4 class="font-bold text-xl mb-4 text-navy-blue">Continuous Innovation</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Integrating the latest technologies and
+                                innovative solutions.</p>
+                        </div>
                     </div>
                 </div>
             </div>
