@@ -59,12 +59,18 @@
             --font-main: 'Outfit', sans-serif;
         }
 
+        html {
+            overflow-x: hidden;
+        }
+
         body {
             font-family: var(--font-main);
             background-color: var(--color-dark);
             color: #f8fafc;
             overflow-x: hidden;
             scroll-behavior: smooth;
+            background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.03) 1px, transparent 0);
+            background-size: 30px 30px;
         }
 
         /* --- Modern Background System --- */
@@ -122,7 +128,7 @@
         }
 
         .glass-dark {
-            background: rgba(2, 6, 23, 0.7);
+            background: rgba(41, 45, 105, 0.7);
             backdrop-filter: blur(24px);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
@@ -583,8 +589,6 @@
     <section id="services" class="section-luxury-dark py-20 md:py-32">
         <div class="mesh-gradient opacity-30"></div>
         <div class="bg-texture opacity-10"></div>
-        <div class="glow-spot glow-primary w-[500px] h-[500px] -top-20 -right-20 opacity-[0.05]"></div>
-
         <div class="container mx-auto px-6 relative z-10">
             <div class="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8 reveal-on-scroll">
                 <div class="ar-only text-center md:text-right">
@@ -623,11 +627,11 @@
                     </div>
                     <div>
                         <div class="ar-only">
-                            <h3 class="text-3xl md:text-4xl font-bold mb-4 md:mb-6 font-arabic text-slate-900">تصميم الفعاليات كمنصات استراتيجية</h3>
+                            <h3 class="text-3xl md:text-4xl font-bold mb-4 md:mb-6 font-arabic text-white group-hover:text-primary transition-colors">تصميم الفعاليات كمنصات استراتيجية</h3>
                             <p class="text-lg md:text-xl text-slate-300 max-w-xl font-arabic leading-relaxed">نقوم بتصميم فعاليات تعزز الشراكة ونشر العلم بطريقة ممتعة ومنهجية، تضم التأثير المستدام للمشاركين.</p>
                         </div>
                         <div class="en-only hidden">
-                            <h3 class="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-slate-900">Sponsorship
+                            <h3 class="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-white group-hover:text-primary transition-colors">Sponsorship
                                 Engineering</h3>
                             <p class="text-lg md:text-xl text-slate-300 max-w-xl leading-relaxed">Strategic sports
                                 events and sponsorship engineering designed for high-impact and regulatory harmony.</p>
@@ -658,13 +662,13 @@
                     class="md:col-span-8 bento-card rounded-[2.5rem] md:rounded-[4rem] p-8 md:p-12 bg-slate-50 flex flex-col md:flex-row gap-10 md:gap-12 items-center reveal-on-scroll">
                     <div class="md:w-1/2">
                         <div class="ar-only">
-                            <h3 class="text-3xl md:text-4xl font-bold mb-4 md:mb-6 font-arabic text-slate-900">التأهيل الشامل وتمكين ذوي الإعاقة</h3>
-                            <p class="text-lg md:text-xl text-slate-300 font-arabic leading-relaxed">تقديم برامج تأهيلية متقدمة وفق منهجية 4M3A المرجعية، لتحويل النشاط البدني إلى إنجاز رياضي قابل للقياس.</p>
+                            <h3 class="text-3xl md:text-4xl font-bold mb-4 md:mb-6 font-arabic text-dark-bg group-hover:text-primary transition-colors">التأهيل الشامل وتمكين ذوي الإعاقة</h3>
+                            <p class="text-lg md:text-xl text-slate-500 font-arabic leading-relaxed">تقديم برامج تأهيلية متقدمة وفق منهجية 4M3A المرجعية، لتحويل النشاط البدني إلى إنجاز رياضي قابل للقياس.</p>
                         </div>
                         <div class="en-only hidden">
-                            <h3 class="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-slate-900">Specialized
+                            <h3 class="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-dark-bg group-hover:text-primary transition-colors">Specialized
                                 Rehabilitation</h3>
-                            <p class="text-lg md:text-xl text-slate-300 leading-relaxed">Empowerment through specialized
+                            <p class="text-lg md:text-xl text-slate-500 leading-relaxed">Empowerment through specialized
                                 4M3A methodology for high-ability inclusion and elite performance.</p>
                         </div>
                     </div>
@@ -690,11 +694,11 @@
                     </div>
                     <div>
                         <div class="ar-only">
-                            <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4 font-arabic text-slate-900">الدعم المؤسسي والامتثال</h3>
+                            <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4 font-arabic text-white group-hover:text-primary transition-colors">الدعم المؤسسي والامتثال</h3>
                             <p class="text-slate-300 font-arabic text-sm md:text-base">تقديم الدعم الفني والإرشادات القانونية لضمان توافق البرامج والمبادرات مع الأنظمة الوطنية والدولية.</p>
                         </div>
                         <div class="en-only hidden">
-                            <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-slate-900">Consulting &
+                            <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-white group-hover:text-primary transition-colors">Consulting &
                                 Compliance</h3>
                             <p class="text-slate-300 text-sm md:text-base">Institutional consulting and full compliance
                                 with the Saudi Sports Law 2025.</p>
@@ -924,9 +928,9 @@
                         <img src="logo.png" alt="4M3A Equilibrium"
                             class="h-16 w-auto mb-10 filter drop-shadow-[0_0_15px_rgba(99,102,241,0.3)]">
                     </div>
-                    <p class="text-slate-200 text-xl leading-relaxed mb-10 max-w-sm font-arabic ar-only italic opacity-80"
-                        dir="ltr">
-                        Equilibrium 4M3A منصة لقيادة التحول الرياضي والمؤسسي عبر تكامل العلم والحوكمة والذكاء.
+                     <p class="text-slate-200 text-xl leading-relaxed mb-10 max-w-sm font-arabic ar-only italic opacity-80"
+                        dir="auto">
+                        منصة Equilibrium 4M3A لقيادة التحول الرياضي والمؤسسي عبر تكامل العلم والحوكمة والذكاء.
                     </p>
                     <p class="text-slate-200 text-xl leading-relaxed mb-10 max-w-sm en-only hidden italic opacity-80">
                         A power platform shaping the future of sport and community empowerment through scientific
@@ -957,22 +961,22 @@
 
                 <!-- Strategic Presence -->
                 <div class="lg:col-span-5 reveal-on-scroll">
-                    <ul class="space-y-8">
-                        <li class="flex items-center gap-6 group cursor-pointer">
+                    <ul class="space-y-8 flex flex-col justify-end">
+                        <li class="flex items-center gap-6 group cursor-pointer flex-row-reverse " >
                             <div
                                 class="w-2.5 h-2.5 rounded-full border border-primary group-hover:bg-primary transition-all">
                             </div>
                             <span class="text-white/90 text-xl font-arabic ar-only">المملكة العربية السعودية</span>
                             <span class="text-white/90 text-xl en-only hidden">Saudi Arabia</span>
                         </li>
-                        <li class="flex items-center gap-6 group cursor-pointer">
+                        <li class="flex items-center gap-6 group cursor-pointer  flex-row-reverse">
                             <div
                                 class="w-2.5 h-2.5 rounded-full border border-accent group-hover:bg-accent transition-all">
                             </div>
                             <span class="text-white/90 text-xl font-arabic ar-only">سلطنة عمان</span>
                             <span class="text-white/90 text-xl en-only hidden">Sultanate of Oman</span>
                         </li>
-                        <li class="flex items-center gap-6 group cursor-pointer">
+                        <li class="flex items-center gap-6 group cursor-pointer  flex-row-reverse">
                             <div
                                 class="w-2.5 h-2.5 rounded-full border border-rose-500 group-hover:bg-rose-500 transition-all">
                             </div>
